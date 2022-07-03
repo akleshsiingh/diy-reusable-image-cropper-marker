@@ -1,0 +1,24 @@
+<div class="information">
+  Quote price from single image.
+  <br>
+  press mouse left button and drag over image
+
+  <div class="actions">
+    <button class="btn" (click)="showAll()">{{ !isEditing ? 'enable edit mode':'enable view mode'}}</button>
+  </div>
+</div>
+<hr>
+<br>
+<!-- dragable element -->
+<div class="container">
+  <div class="draggable-container" [appDrawRectangle]="'assets/sample_img_2.jpg'" #cropper>
+    <img src="assets/sample_img_2.jpg">
+  </div>
+
+  <div class="clips">
+    <div class="btn">
+      <button class="crop" (click)="crop()">Crop Selected</button>
+    </div>
+    <img [src]="image.img" alt="" *ngFor="let image of imageList" (click)="showOnMainImage(image)">
+  </div>
+</div>

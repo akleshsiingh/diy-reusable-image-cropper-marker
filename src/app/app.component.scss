@@ -1,0 +1,45 @@
+.information {
+    padding: 10px;
+
+    .actions {
+        margin: 10px;
+    }
+}
+
+.container {
+    &>div {
+        display: inline-block;
+    }
+}
+
+
+.lens {
+    border: 2px solid red;
+}
+
+.draggable-container {
+    width: 70%;
+    // padding: 10px;
+
+    img {
+        width: inherit;
+        vertical-align: top;
+    }
+}
+
+.clips {
+
+    padding: 0 10px;
+    vertical-align: top;
+    width: 30%;
+
+    button {}
+
+    img {
+        max-width: 140px;
+        max-height: 140px;
+        object-fit: contain;
+        margin: 5px 5px 0px 0;
+        vertical-align: top;
+    }
+}
