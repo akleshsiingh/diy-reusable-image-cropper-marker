@@ -1,4 +1,4 @@
-## Code is self contained and featture can be easily migrated to any other js framework.
+## Code is self contained and feature can be easily migrated to any other js framework.
 
 Last weekend i got the idea to create something to just quote price of different articles in one single image. So Just take one single image and mark different articles with rectangle and quote their price (In progress).
 After that their was no stopping me, i jumped to code and started shaping my little idea.
