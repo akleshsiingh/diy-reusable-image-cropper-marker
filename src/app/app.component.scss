@@ -35,11 +35,21 @@
 
     button {}
 
-    img {
-        max-width: 140px;
-        max-height: 140px;
-        object-fit: contain;
-        margin: 5px 5px 0px 0;
+    .img-container {
+        display: inline-block;
         vertical-align: top;
+        img {
+            max-width: 140px;
+            max-height: 140px;
+            object-fit: contain;
+            margin: 5px 5px 0px 0;
+            vertical-align: top;
+
+            &.active{
+                border: 1px solid red;
+            }
+        }
     }
+
+
 }

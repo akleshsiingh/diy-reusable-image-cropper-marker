@@ -19,6 +19,16 @@
     <div class="btn">
       <button class="crop" (click)="crop()">Crop Selected</button>
     </div>
-    <img [src]="image.img" alt="" *ngFor="let image of imageList" (click)="showOnMainImage(image)">
+    <ng-container *ngIf="selectedIndex>=0">
+     <div class="">
+      <input type="number" placeholder="enter price" [formControl]="priceControl">&nbsp;<span (click)="addPrice()">ADD PRICE</span>
+     </div>
+    </ng-container>
+    <div class="img-container" *ngFor="let image of imageList;let i = index;">
+      <img [src]="image.img" alt=""  (click)="showOnMainImage(image,i)"
+        [class.active]="selectedIndex==i">
+        <div>{{image.price}}</div>
+    </div>
+
   </div>
 </div>

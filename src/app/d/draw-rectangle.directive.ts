@@ -327,7 +327,7 @@ export class DrawRectangleDirective implements AfterViewInit {
   }
 
 
-  showAll(imageList: { img: string; width: number; height: number; x: number; y: number; }[]) {
+  showAll(imageList: { img: string; width: number; height: number; x: number; y: number; price: string }[]) {
     this.disableEdit();
     this.dismissRectangle();
     this.removeAllMarkers();
@@ -346,6 +346,13 @@ export class DrawRectangleDirective implements AfterViewInit {
       this.render2.setStyle(lens, 'width', (image.width / wFactor) + 'px');
       this.render2.setStyle(lens, 'height', (image.height / hFactor) + 'px');
       this.render2.appendChild(this.el.nativeElement, lens);
+
+      // show price
+      const priceTag = this.render2.createElement('div');
+      const x = this.render2.createText(`$ ${image.price}`);
+      this.render2.appendChild(priceTag, x);
+      this.render2.appendChild(lens, priceTag);
+      
       this.markedLens.push(lens);
 
     }
